@@ -1,3 +1,6 @@
-move *.dll C:\WINDOWS\system32
-move mmd*.bat C:\WINDOWS\system32
-move multimarkdown.exe C:\WINDOWS\system32
+IF "%1" == "" __MMD_DIR=%1 ELSE __MMD_DIR=C:\WINDOWS\system32
+
+move *.dll %__MMD_DIR% 
+move mmd*.bat %__MMD_DIR% 
+move multimarkdown.exe %__MMD_DIR% 
+
